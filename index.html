@@ -122,7 +122,7 @@
           <option value="tamale">Tamale</option>
         </select>
         <input type="text" placeholder="Preferred Pickup/Delivery Time" />
-        <button class="btn btn-primary">Send Order</button>
+        <button class="btn btn-primary" onclick="sendToWhatsApp()">Send Order</button>
       </div>
 
       <div class="order-whatsapp">
@@ -203,5 +203,17 @@
     <p>© 2025 GlorySnacks — Fresh doughnuts made with love 🍩</p>
   </footer>
 
+<script>
+function sendToWhatsApp() {
+  var n = document.querySelector('input[placeholder="Your Name"]').value;
+  var p = document.querySelector('input[placeholder="Phone Number"]').value;
+  var t = document.querySelector('select').value;
+  var q = document.querySelector('input[placeholder="Quantity"]').value;
+  var l = document.querySelectorAll('select')[1].value;
+  var d = document.querySelector('input[placeholder="Preferred Pickup/Delivery Time"]').value;
+  var msg = "Hello GlorySnacks!%0AName: " + n + "%0APhone: " + p + "%0AType: " + t + "%0AQty: " + q + "%0ALocation: " + l + "%0ATime: " + d;
+  window.open("https://wa.me/233203192792?text=" + msg, "_blank");
+}
+</script>
 </body>
 </html>
