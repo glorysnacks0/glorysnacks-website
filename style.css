@@ -501,3 +501,13 @@ a {
     grid-template-columns: 1fr;
   }
 }
+/* DELIVERY NOTE */
+.delivery-note {
+  font-size: 0.82rem;
+  color: #7a5c4f;
+  background-color: #fff5e0;
+  border-left: 3px solid #F5C842;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  line-height: 1.6;
+}
